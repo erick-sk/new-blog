@@ -3,6 +3,9 @@
 
   <div>
     <p>Written by: <strong> <%= @article.user.email %></strong></p>
+    <% if current_user.avatar.attached? %>
+      <%= image_tag url_for(current_user.avatar), height: 50 %>
+    <% end %>
   </div>
 
   <div>
