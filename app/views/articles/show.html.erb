@@ -1,8 +1,15 @@
-<h1><%= @article.title %></h1>
-<div>
-  <%= @article.content %>
-</div>
+<div class="large-container center-block">
+  <h1><%= @article.title %></h1>
 
-<div>
-  <%= link_to 'Delete article', @article, method: :delete%>
+  <div>
+    <p>Written by: <strong> <%= @article.user.email %></strong></p>
+  </div>
+
+  <div>
+    <%= @article.content %>
+  </div>
+
+  <div>
+    <%= link_to 'Delete article', @article, method: :delete%>
+  </div>
 </div>
