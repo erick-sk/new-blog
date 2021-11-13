@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'welcome', to: 'home#index'
 
   root to: 'home#index'
-
+  resources :categories
   resources :articles do
     get 'user/:user_id', to: 'articles#from_author', on: :collection
   end
